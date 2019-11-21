@@ -13,12 +13,13 @@ body {
 }
 
 nav {
-  float: left;
   height: 100vh;
   width: 6%;
   background-color: white;
   position: fixed;
   text-align: center;
+  top: 0px;
+  left: 0px;
 }
 
 .logo {
@@ -35,7 +36,7 @@ nav {
   box-sizing: content-box;
 }
 
-.icon:hover {
+.dashboard-icon {
   border-left: 4px solid #1CA3BA;
   position: relative;
   left: -4px;
@@ -43,21 +44,13 @@ nav {
 
 .toolbar {
   position: absolute;
-  top: 42%;
-  left: 35%;
-  margin: -60px 0 0 -20px;
-}
-
-.account-icon {
-  width: 25px;
-  position: absolute;
-  top: 50%;
-  margin-top: -17px;
+  top: 35%;
+  left: 8px
 }
 
 main {
   margin-left: 8%;
-  margin-right: 10%;
+  margin-right: 4%;
 }
 
 h1, h2, h3 {
@@ -66,11 +59,6 @@ h1, h2, h3 {
 
 h2 {
   font-size: 20px;
-}
-
-.balancing-act {
-  float: left;
-  width: 94%;
 }
 
 section {
@@ -117,21 +105,19 @@ section {
 
 .box {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+  background-color: white;
 }
 
 .account-summary {
   overflow: auto;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .account {
   float: left;
   width: 30%;
-  background-color: white;
   margin-right: 5%;
-  padding-top: 8px;
-  padding-bottom: 12px;
-  padding-left: 14px;
+  padding: 14px 0 12px 14px;
 }
 
 .account:last-of-type {
@@ -140,7 +126,6 @@ section {
 
 .label {
   text-transform: uppercase;
-  margin-bottom: 0;
   font-size: 10px;
 }
 
@@ -158,11 +143,10 @@ button:hover {
   background-color: #88eba2;
 }
 
-.row {
-  background-color: white;
+.accounts-list-row {
   margin-top: 10px;
-  height: 50px;
-  line-height: 55px;
+  height: 60px;
+  line-height: 65px;
 }
 
 .icon-item {
@@ -170,6 +154,13 @@ button:hover {
   width: 20%;
   padding-left: 15px;
   position: relative;
+}
+
+.account-icon {
+  width: 25px;
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
 }
 
 .account-item {
@@ -191,7 +182,7 @@ table {
 td, th {
   font-size: 14px;
   text-align: left;
-  padding: 7px 0px 4px 0;
+  padding: 8px 0px 5px 0;
 }
 
 tr {
@@ -205,7 +196,6 @@ tr:first-of-type {
 }
 
 .transactions-box {
-  background-color: white;
   padding: 20px 20px 10px 20px;
 }
 
@@ -214,11 +204,11 @@ tr:first-of-type {
 }
 
 .payee {
-  width: 39%;
+  width: 41%;
 }
 
 .inflow {
-  width: 24%;
+  width: 22%;
 }
 
 .outflow {
