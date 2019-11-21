@@ -7,7 +7,6 @@
 }
 
 body {
-  margin: 0;
   background-color: #F5F5F5;
   font-family: 'Biryani', sans-serif;
 }
@@ -44,17 +43,14 @@ nav {
 
 .toolbar {
   position: absolute;
-  top: 35%;
+  top: 39%;
   left: 8px
 }
 
 main {
   margin-left: 8%;
   margin-right: 4%;
-}
-
-h1, h2, h3 {
-  margin: 0;
+  white-space: nowrap;
 }
 
 h2 {
@@ -65,15 +61,16 @@ section {
   margin: 20px 0 0 0;
 }
 
-.welcome-message {
-  display: inline;
-}
 
 .welcome {
   background: linear-gradient(90deg, #8ED1DC, #E3F4F6);
   height: 100px;
   line-height: 100px;
   padding-left: 25px;
+}
+
+.welcome-message {
+  display: inline;
 }
 
 #closebtn {
@@ -83,24 +80,17 @@ section {
   display: inline;
 }
 
-.section-header {
-  display: inline-block;
-  margin: 0;
-}
 
 .column-left {
-  width: 48%;
-  float: left;
+  width: 49%;
   margin-right: 6%;
+  display: inline-block;
 }
 
 .column-right {
-  width: 46%;
-  float: left;
-}
-
-.title-button-row{
-  margin-bottom: 20px;
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .box {
@@ -108,25 +98,13 @@ section {
   background-color: white;
 }
 
-.account-summary {
-  overflow: auto;
-  margin-bottom: 40px;
+.title-button-row {
+  margin-bottom: 20px;
 }
 
-.account {
-  float: left;
-  width: 30%;
-  margin-right: 5%;
-  padding: 14px 0 12px 14px;
-}
-
-.account:last-of-type {
-  margin-right: 0;
-}
-
-.label {
-  text-transform: uppercase;
-  font-size: 10px;
+.section-header {
+  display: inline;
+  margin: 0;
 }
 
 button {
@@ -141,6 +119,28 @@ button {
 
 button:hover {
   background-color: #88eba2;
+}
+
+.account-summary {
+  overflow: auto;
+  margin-bottom: 40px;
+}
+
+.account {
+  width: 30%;
+  margin-right: 5%;
+  padding: 14px 0 12px 14px;
+  display: inline-block;
+
+}
+
+.account:last-of-type {
+  margin-right: 0;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 10px;
 }
 
 .accounts-list-row {
