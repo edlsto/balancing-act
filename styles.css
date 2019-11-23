@@ -35,7 +35,7 @@ nav {
   box-sizing: content-box;
 }
 
-.dashboard-icon {
+.active {
   border-left: 4px solid #1CA3BA;
   position: relative;
   left: -4px;
