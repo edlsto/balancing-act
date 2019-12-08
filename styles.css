@@ -13,7 +13,7 @@ body {
 
 nav {
   height: 100vh;
-  width: 6%;
+  width: 85px;
   background-color: white;
   position: fixed;
   text-align: center;
@@ -48,7 +48,7 @@ nav {
 }
 
 main {
-  margin-left: 8%;
+  margin-left: 111px;
   margin-right: 4%;
   white-space: nowrap;
 }
@@ -92,15 +92,11 @@ section {
 }
 
 .column-left {
-  width: 49%;
-  margin-right: 6%;
-  display: inline-block;
+  flex-basis: 49%
 }
 
 .column-right {
-  width: 45%;
-  display: inline-block;
-  vertical-align: top;
+  flex-basis: 45%;
 }
 
 .box {
@@ -110,6 +106,8 @@ section {
 
 .title-button-row {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .section-header {
@@ -124,8 +122,6 @@ button {
   border-radius: 25px;
   color: white;
   text-transform: uppercase;
-  float: right;
-  margin-left: 2px;
 }
 
 .transaction-button {
@@ -157,13 +153,13 @@ button:hover.inactive{
 .account-summary {
   overflow: auto;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .account {
-  width: 30%;
-  margin-right: 5%;
+  flex-basis: 30%;
   padding: 14px 0 12px 14px;
-  display: inline-block;
 }
 
 .account:last-of-type {
@@ -192,7 +188,7 @@ button:hover.inactive{
   width: 25px;
   position: absolute;
   top: 50%;
-  margin-top: -17px;
+  margin-top: -14px;
 }
 
 .account-item {
@@ -256,7 +252,7 @@ h1 {
 }
 
 form {
-  padding: 30px 60px 40px 60px;
+  padding: 30px 60px 40px;
 }
 
 .section-header-centered {
@@ -310,6 +306,8 @@ input {
 
 .transactions-page-header {
   width: 49%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .log-expense-button {
@@ -318,6 +316,12 @@ input {
   display: block;
   text-transform: none;
   padding: 10px 40px 6px 40px;
+
+}
+
+.log-expense-button[disabled]:hover {
+  background-color: #1CA3BA;
+  cursor: default;
 }
 
 .transactions-page-table th {
@@ -347,4 +351,142 @@ input {
 
 .transactions-page-table .outflow {
   width: 18%;
+}
+
+.log-expense-confirmation {
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+  padding: 0 20px;
+  position: absolute;
+  bottom: 0;
+  background-color: #E3FFD4;
+  font-size: 14px;
+  transition-property: 'height, padding';
+  transition-duration: 300ms;
+}
+
+.log-expense-confirmation p {
+  display: inline;
+}
+
+.transactions-page-box {
+  position: relative;
+}
+
+#closebtn-confirmation {
+  width: 12px;
+  float: right;
+  margin: 4px 0px 0 0;
+  display: inline;
+}
+
+
+.box-appear {
+  height: 40px;
+  padding: 8px 20px;
+}
+
+.validate:invalid{
+  border: 2px solid red;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.your-profile {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 7%;
+}
+
+.right-column {
+  width: 53%;
+  display: inline-block;
+}
+
+.your-profile-box {
+  padding: 30px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-info-btn {
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+.your-accounts .accounts-list-row {
+  display: flex;
+  font-size: 14px;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+
+.profile-page-col1 {
+  flex: 1 1 0;
+}
+
+.profile-page-col2 {
+  flex: 1 1 0;
+}
+
+.profile-page-col3 {
+  flex: 1 1 0;
+}
+
+.profile-page-col4 {
+  flex: 0 1 0;
+}
+
+.your-accounts button {
+  font-size: 10px;
+  padding: 4px 10px 0 10px;
+  margin-right: 10px;
+}
+
+.your-accounts button:last-of-type {
+  margin-right: 0px;
+}
+
+.delete-btn {
+  background-color: #EE3C4C
+}
+
+.add-an-account {
+  padding: 20px;
+}
+
+.add-account-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.add-account-type {
+  flex: 0 1 auto;
+  margin-right: 20px;
+}
+
+.add-account-nickname {
+  flex: 0 1 auto;
+  margin-right: 20px;
+
+}
+
+.add-account-status {
+  flex: 0 1 20%;
+  margin-right: 20px;
+
+}
+
+.add-account-button {
+  flex: 0 1 auto;
+  align-self: flex-end;
+  margin-right: 20px;
 }
