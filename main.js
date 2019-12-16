@@ -3,7 +3,6 @@ var icons = document.querySelectorAll('.icon');
 var pageContent = document.querySelector("main");
 toolbar.addEventListener('click', changeHighlightChangePage);
 pageContent.addEventListener('click', changeHighlightChangePage);
-pageContent.addEventListener('click', changeHighlightChangePage);
 pageContent.addEventListener('click', displayExpenseLogAlert);
 pageContent.addEventListener('click', closeExpenseLogAlert);
 pageContent.addEventListener('click', closeWelcomeBanner);
