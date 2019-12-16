@@ -2,10 +2,10 @@ var toolbar = document.querySelector('.toolbar');
 var icons = document.querySelectorAll('.icon');
 var pageContent = document.querySelector("main");
 toolbar.addEventListener('click', changeHighlightChangePage);
+pageContent.addEventListener('click', changeHighlightChangePage);
+pageContent.addEventListener('click', changeHighlightChangePage);
 pageContent.addEventListener('click', displayExpenseLogAlert);
 pageContent.addEventListener('click', closeExpenseLogAlert);
-pageContent.addEventListener('click', goToAccountsPage);
-pageContent.addEventListener('click', goToTransactionsPage);
 pageContent.addEventListener('click', closeWelcomeBanner);
 
 function removeHighlight() {
@@ -26,21 +26,13 @@ function changePage() {
 
 function changeHighlightChangePage(event) {
   removeHighlight();
-  event.target.parentElement.classList.add('active');
-  changePage();
-}
-
-function goToAccountsPage(event){
-  if (event.target.id === 'manage-accounts') {
-    removeHighlight();
+  if (event.target.parentElement.parentElement === toolbar) {
+    event.target.parentElement.classList.add('active');
+    changePage();
+  } else if (event.target.id === 'manage-accounts') {
     toolbar.firstElementChild.nextElementSibling.classList.add('active');
     addProfileHTML();
-  }
-}
-
-function goToTransactionsPage(event){
-  if (event.target.id === 'new-transaction') {
-    removeHighlight();
+  } else if (event.target.id === 'new-transaction'){
     toolbar.firstElementChild.nextElementSibling.nextElementSibling.classList.add('active')
     addTransactionsHTML();
   }
